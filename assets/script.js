@@ -8,15 +8,12 @@ function generatePassword(){
 
   if (lengthofpwd <8 && lengthofpwd!== null) {
      alert("Password length should atleast be 8 characters");
-    return;
   }
   else if (lengthofpwd >128){
       alert("Password length should be  8 - 128 characters");
-      return;
   }
   else if (lengthofpwd== null){
       alert("Thank you for Trying!!");
-      return;
   }
   else if(lengthofpwd>=8 || lengthofpwd <=128){
     var confirmspecialcharacters = confirm(" Click ok to confirm including Special Characters");
@@ -58,6 +55,7 @@ function generatePassword(){
       }
    }  
   }
+randompassword.sort((a,b) => 0.5-Math.random());
 return (randompassword.join(""));
 }
 
