@@ -3,6 +3,7 @@ var generateBtn = document.querySelector("#generate");
 
 // Write password to the #password input
 function generatePassword(){
+  var randompassword = [];
   var lengthofpwd = prompt("How many characters would you like the password to contain?");
 
   if (lengthofpwd <8 && lengthofpwd!== null) {
@@ -26,8 +27,7 @@ function generatePassword(){
       alert("Please select atleast one character type");
       writePassword();
     }
-  
-    var randompassword = [];
+    
     var splcharacters = ["!","@","#","$","%","&","*"];
     var numbers = ["0","1","2","3","4","5","6","7","8","9"];
     var upcaselet = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
