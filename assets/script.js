@@ -8,14 +8,15 @@ function generatePassword(){
 
   if (lengthofpwd <8 && lengthofpwd!== null) {
      alert("Password length should atleast be 8 characters");
-     writePassword();
+    return;
   }
   else if (lengthofpwd >128){
-      alert("Password length sould be between 8 - 128 characters");
-      writePassword();
+      alert("Password length should be  8 - 128 characters");
+      return;
   }
   else if (lengthofpwd== null){
-      alert("Thank you for Trying!!")
+      alert("Thank you for Trying!!");
+      return;
   }
   else if(lengthofpwd>=8 || lengthofpwd <=128){
     var confirmspecialcharacters = confirm(" Click ok to confirm including Special Characters");
@@ -25,7 +26,7 @@ function generatePassword(){
 
     if ((!confirmspecialcharacters)&&(!confirmnumbers)&&(!confirmuppercaseletters)&&(!confirmlowercaseletters)){
       alert("Please select atleast one character type");
-      writePassword();
+      return;
     }
     
     var splcharacters = ["!","@","#","$","%","&","*"];
@@ -33,7 +34,7 @@ function generatePassword(){
     var upcaselet = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
     var lowcaselett = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
 
-    for (var i=0;i< lengthofpwd; i){
+    for ( var i=0;i< lengthofpwd; i){
       
       if ((confirmspecialcharacters) && (i<lengthofpwd)){
         var index1= Math.floor(Math.random() * splcharacters.length);
